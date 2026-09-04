@@ -1,13 +1,18 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://escenas/visual.tscn" type="PackedScene" id=1]
 [ext_resource path="res://escenas/Caja.tscn" type="PackedScene" id=4]
 [ext_resource path="res://escenas/GeneradorTomates.gd" type="Script" id=5]
+[ext_resource path="res://escenas/visual2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://escenas/Interfaz.tscn" type="PackedScene" id=7]
 
 [node name="Mapa" type="Node2D"]
 
 [node name="personaje" parent="." instance=ExtResource( 1 )]
 position = Vector2( -10, -20 )
+
+[node name="personaje2" parent="." instance=ExtResource( 6 )]
+position = Vector2( 20, -20 )
 
 [node name="Caja" parent="." instance=ExtResource( 4 )]
 position = Vector2( -75, -7 )
@@ -23,3 +28,5 @@ position = Vector2( 46, -8 )
 
 [node name="GeneradorTomates" type="Node" parent="."]
 script = ExtResource( 5 )
+
+[node name="Interfaz" parent="." instance=ExtResource( 7 )]
